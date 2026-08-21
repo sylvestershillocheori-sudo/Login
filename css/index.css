@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/img/photo-1507525428034-b723cf961d3e.png) center/cover no-repeat;
+    ;
+}
+
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    width: 350px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin: auto;
+    opacity: 0.8;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: transparent;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    color: white;
+    animation: fadeIn 1s ease forwards, floatCard 4s ease-in-out infinite;
+}
+
+.login-card h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* floating label */
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+button {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(38, 214, 214);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(38, 214, 214, 0.639);
+    box-shadow:rgb(56, 54, 54) ;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #d3d1d1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        width: 100%;
+    }
+}
